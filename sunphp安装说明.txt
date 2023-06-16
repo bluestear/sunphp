@@ -1,0 +1,7 @@
+1，环境要求：PHP7.4+Mysql（推荐5.7）+Nginx/Apache
+2，服务器推荐：阿里云/腾讯云+2核4G5M及以上+宝塔
+3，取消php7.4禁用函数——exec
+4，访问https://您的域名/install.php安装本系统
+5，根据提示配置您的数据库、管理后台admin密码
+6，在服务器文件/etc/ssh/ssh_config末尾添加配置
+Include /www/wwwroot/sunphp.git/*.conf

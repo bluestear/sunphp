@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=utf-8>
+    <meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1">
+    <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link rel=icon href=/app/admin/view/index/favicon.ico>
+    <title>管理后台</title>
+    <link href=/app/admin/view/index/static/css/chunk-elementUI.ded27da0.css rel=stylesheet>
+    <link href=/app/admin/view/index/static/css/chunk-libs.3dfb7769.css rel=stylesheet>
+    <link href=/app/admin/view/index/static/css/app.ce66945b.css rel=stylesheet>
+</head>
+
+<body><noscript><strong>We're sorry but 管理后台 doesn't work properly without JavaScript enabled. Please enable it to
+            continue.</strong></noscript>
+    <div id=app></div>
+
+
+
+
+
+    <script>
+        var sub_directory='{$sub_directory}';
+        var sunphp_siteinfo={
+            'siteroot':'{$domain}'+sub_directory+'/index.php',
+            'module_name':'admin'
+        };
+    </script>
+
+
+
+
+    <script src=/app/admin/view/index/static/js/chunk-elementUI.89b6c4c8.js></script>
+    <script src=/app/admin/view/index/static/js/chunk-libs.fcca9baa.js></script>
+    <script>(function (e) { function n(n) { for (var c, r, o = n[0], d = n[1], h = n[2], i = 0, f = []; i < o.length; i++)r = o[i], a[r] && f.push(a[r][0]), a[r] = 0; for (c in d) Object.prototype.hasOwnProperty.call(d, c) && (e[c] = d[c]); b && b(n); while (f.length) f.shift()(); return u.push.apply(u, h || []), t() } function t() { for (var e, n = 0; n < u.length; n++) { for (var t = u[n], c = !0, r = 1; r < t.length; r++) { var o = t[r]; 0 !== a[o] && (c = !1) } c && (u.splice(n--, 1), e = d(d.s = t[0])) } return e } var c = {}, r = { runtime: 0 }, a = { runtime: 0 }, u = []; function o(e) { return d.p + "static/js/" + ({}[e] || e) + "." + { "chunk-0b503936": "f3a1903f", "chunk-0c1567b4": "a2fc8325", "chunk-2d0b651b": "74070ba2", "chunk-2d21d504": "8e4ac7e9", "chunk-35d0c2ee": "cc28c061", "chunk-578aab58": "82e9a9cc", "chunk-5ad73710": "2f5a9fc7", "chunk-61645842": "9f24a1f0", "chunk-6ab53c7c": "49a6e9ab", "chunk-74ad6cad": "b4ad6409", "chunk-3e74a959": "2db90658", "chunk-7dba2a1d": "332d2da5", "chunk-82082e14": "e6021a14", "chunk-aa3e296a": "83b18a81", "chunk-b9ceb258": "adf226cb", "chunk-cc021144": "80ad796d", "chunk-491b65a4": "50fa0955", "chunk-748b566e": "f8061e3e" }[e] + ".js" } function d(n) { if (c[n]) return c[n].exports; var t = c[n] = { i: n, l: !1, exports: {} }; return e[n].call(t.exports, t, t.exports, d), t.l = !0, t.exports } d.e = function (e) { var n = [], t = { "chunk-0b503936": 1, "chunk-0c1567b4": 1, "chunk-35d0c2ee": 1, "chunk-578aab58": 1, "chunk-5ad73710": 1, "chunk-61645842": 1, "chunk-6ab53c7c": 1, "chunk-3e74a959": 1, "chunk-7dba2a1d": 1, "chunk-82082e14": 1, "chunk-aa3e296a": 1, "chunk-b9ceb258": 1, "chunk-cc021144": 1 }; r[e] ? n.push(r[e]) : 0 !== r[e] && t[e] && n.push(r[e] = new Promise((function (n, t) { for (var c = "static/css/" + ({}[e] || e) + "." + { "chunk-0b503936": "1e46b88b", "chunk-0c1567b4": "abad8b97", "chunk-2d0b651b": "31d6cfe0", "chunk-2d21d504": "31d6cfe0", "chunk-35d0c2ee": "c8f87789", "chunk-578aab58": "bec6993d", "chunk-5ad73710": "1bf2bae7", "chunk-61645842": "2acc2e3a", "chunk-6ab53c7c": "a7cb63cb", "chunk-74ad6cad": "31d6cfe0", "chunk-3e74a959": "e31f2d09", "chunk-7dba2a1d": "79160dd0", "chunk-82082e14": "11bbfb91", "chunk-aa3e296a": "8daf9a56", "chunk-b9ceb258": "d126961b", "chunk-cc021144": "7da6012c", "chunk-491b65a4": "31d6cfe0", "chunk-748b566e": "31d6cfe0" }[e] + ".css", a = d.p + c, u = document.getElementsByTagName("link"), o = 0; o < u.length; o++) { var h = u[o], i = h.getAttribute("data-href") || h.getAttribute("href"); if ("stylesheet" === h.rel && (i === c || i === a)) return n() } var f = document.getElementsByTagName("style"); for (o = 0; o < f.length; o++) { h = f[o], i = h.getAttribute("data-href"); if (i === c || i === a) return n() } var b = document.createElement("link"); b.rel = "stylesheet", b.type = "text/css", b.onload = n, b.onerror = function (n) { var c = n && n.target && n.target.src || a, u = new Error("Loading CSS chunk " + e + " failed.\n(" + c + ")"); u.code = "CSS_CHUNK_LOAD_FAILED", u.request = c, delete r[e], b.parentNode.removeChild(b), t(u) }, b.href = a; var l = document.getElementsByTagName("head")[0]; l.appendChild(b) })).then((function () { r[e] = 0 }))); var c = a[e]; if (0 !== c) if (c) n.push(c[2]); else { var u = new Promise((function (n, t) { c = a[e] = [n, t] })); n.push(c[2] = u); var h, i = document.createElement("script"); i.charset = "utf-8", i.timeout = 120, d.nc && i.setAttribute("nonce", d.nc), i.src = o(e), h = function (n) { i.onerror = i.onload = null, clearTimeout(f); var t = a[e]; if (0 !== t) { if (t) { var c = n && ("load" === n.type ? "missing" : n.type), r = n && n.target && n.target.src, u = new Error("Loading chunk " + e + " failed.\n(" + c + ": " + r + ")"); u.type = c, u.request = r, t[1](u) } a[e] = void 0 } }; var f = setTimeout((function () { h({ type: "timeout", target: i }) }), 12e4); i.onerror = i.onload = h, document.head.appendChild(i) } return Promise.all(n) }, d.m = e, d.c = c, d.d = function (e, n, t) { d.o(e, n) || Object.defineProperty(e, n, { enumerable: !0, get: t }) }, d.r = function (e) { "undefined" !== typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }), Object.defineProperty(e, "__esModule", { value: !0 }) }, d.t = function (e, n) { if (1 & n && (e = d(e)), 8 & n) return e; if (4 & n && "object" === typeof e && e && e.__esModule) return e; var t = Object.create(null); if (d.r(t), Object.defineProperty(t, "default", { enumerable: !0, value: e }), 2 & n && "string" != typeof e) for (var c in e) d.d(t, c, function (n) { return e[n] }.bind(null, c)); return t }, d.n = function (e) { var n = e && e.__esModule ? function () { return e["default"] } : function () { return e }; return d.d(n, "a", n), n }, d.o = function (e, n) { return Object.prototype.hasOwnProperty.call(e, n) }, d.p = "/app/admin/view/index/", d.oe = function (e) { throw console.error(e), e }; var h = window["webpackJsonp"] = window["webpackJsonp"] || [], i = h.push.bind(h); h.push = n, h = h.slice(); for (var f = 0; f < h.length; f++)n(h[f]); var b = i; t() })([]);</script>
+    <script src=/app/admin/view/index/static/js/app.8df26f67.js></script>
+</body>
+
+</html>

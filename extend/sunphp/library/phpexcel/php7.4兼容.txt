@@ -1,0 +1,3 @@
+1，报错Array and string offset access syntax with curly braces is deprecated
+2，php7.4以后，不支持array{}的写法，统一为[]
+3，必须使用修改后的phpexcel，否则无法正常使用！

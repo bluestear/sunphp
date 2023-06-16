@@ -1,0 +1,84 @@
+.sun-one{
+    padding: 15px 60px;
+    border-bottom: 1px solid #efefef;
+}
+.sun-one img{
+    width: 45px;
+    height: 45px;
+    margin-right: 20px;
+}
+.sun-img{
+    width: 70px;
+    height: 70px;
+}
+.sun-audio{
+
+}
+.sun-video{
+    height: 300px;
+}
+
+.sun-input-file{
+    margin: 10px 0px;
+}
+
+.sun-one .sun-title{
+    font-size: 16px;
+    cursor: pointer;
+}
+.sun-one .sun-name{
+    margin-left: 10px;
+    font-size: 16px;
+    color: #999;
+    cursor: pointer;
+}
+.sun-one .sun-name a{
+    color: #999;
+}
+.sun-two{
+    padding: 20px;
+    display: flex;
+    min-height: calc(100vh - 50px);
+}
+.sun-menu{
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    height: 100%;
+    align-items: center;
+    flex-shrink: 0;
+}
+.sun-app{
+    margin-bottom: 20px;
+}
+
+.sun-app img{
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+.sun-menu a{
+    padding: 15px 0px;
+}
+.sun-menu a.active{
+    color:deepskyblue;
+}
+.sun-content{
+    margin: 0px 20px;
+    flex-grow: 2;
+}
+.sun-footer{
+    text-align: center;
+    color:#6f6f6f;
+    font-size: 14px;
+    margin-top: 20px;
+}
+.sun-link{
+margin-bottom: 10px;
+}
+.sun-link span{
+    margin-right: 20px;
+}
+.sun-copyright{
+    margin-bottom: 20px;
+}

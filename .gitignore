@@ -1,0 +1,18 @@
+/.idea
+/.vscode
+*.log
+
+# .env
+
+
+# addons module
+/addons/*/
+
+# app module
+/app/light_im/
+
+# attachment
+/attachment/*/
+
+# runtime
+/runtime/*/

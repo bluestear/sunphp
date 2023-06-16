@@ -1,0 +1,130 @@
+<!--
+ * @Author: SonLight Tech
+ * @Date: 2023-04-13 15:59:37
+ * @LastEditors: light
+ * @LastEditTime: 2023-04-14 15:00:14
+ * @Description: SonLight Tech版权所有
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>微信公众号登录</title>
+
+
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .mask {
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+
+        .content {
+            width: 100%;
+            height: 30%;
+            background: #FFFFFF;
+            display: block;
+            position: fixed;
+            z-index: 1000;
+            bottom: 0px;
+            box-sizing: border-box;
+            padding: 20px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .div-one {
+            font-size: 20px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .div-two {
+            font-size: 16px;
+            margin-bottom: 36px;
+        }
+
+        .div-btn {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .btn-deny {
+            border: 1px solid #888;
+            background: unset;
+            width: 30%;
+            line-height: 36px;
+            color: #888;
+            font-size: 16px;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        .btn {
+            border-radius: 5px;
+            outline: none;
+            background: #07c160;
+            border: unset;
+            width: 30%;
+            line-height: 36px;
+            color: white;
+            font-size: 16px;
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="mask"></div>
+    <div class="content">
+        <div class="div-one">
+            <span>网页申请获得以下权限</span>
+        </div>
+        <div class="div-two">
+            <span>获取您的昵称、头像</span>
+        </div>
+        <div class="div-btn">
+
+            <button class="btn-deny" type="button" onclick="closeBtn()">拒绝</button>
+            <button class="btn" type="button" onclick="openBtn()">同意</button>
+        </div>
+
+    </div>
+
+    <script>
+        // 使用think模板引擎会导致转义
+        var open_url = '<?php echo $open_url ?>';
+
+
+        var closeBtn=function () {
+            window.close();
+        };
+
+        document.addEventListener(
+            "WeixinJSBridgeReady",
+            function () {
+                closeBtn = function () {
+                    WeixinJSBridge.call("closeWindow");
+                }
+            },
+            false
+        );
+
+        function openBtn() {
+            window.location.href = open_url;
+        }
+    </script>
+
+</body>
+
+</html>

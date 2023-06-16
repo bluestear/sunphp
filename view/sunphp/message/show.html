@@ -1,0 +1,104 @@
+<!--
+ * @Author: SonLight Tech
+ * @Date: 2023-05-16 15:43:24
+ * @LastEditors: light
+ * @LastEditTime: 2023-05-16 16:31:54
+ * @Description: SonLight Tech版权所有
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {if $type=='error'}
+            操作失败
+        {elseif $type=='success'/}
+            操作成功
+        {else /}
+            返回
+        {/if}
+    </title>
+
+    <link rel="stylesheet" href="/public/sunphp/css/iconfont.css">
+
+    <style type="text/css">
+        .content{
+            display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20vh;
+    text-align: center;
+    font-size: 16px;
+        }
+        .title{
+            margin:25px 0px;
+        }
+        .icon-div{
+        }
+        .icon-div span{
+            font-size: 66px;
+        }
+        .icon-div span.icon-chenggong{
+            color: #26BF4C;
+        }
+        .icon-div span.icon-shibai{
+            color: #FF3C32;
+        }
+        .tap-a{
+            background: #26BF4C;
+            cursor: pointer;
+    color: white;
+    padding: 8px 12px;
+    text-decoration: unset;
+    border-radius: 3px;
+    font-size: 14px;
+    margin-bottom: 20px;
+        }
+        .tap-a:hover{
+            background:#2DC252;
+        }
+        .redirect{
+            font-size: 14px;
+            color: #888;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="content">
+    <div class="icon-div">
+        {if $type=='error'}
+        <span class="iconfont icon-shibai"></span>
+        {elseif $type=='success'/}
+        <span class="iconfont icon-chenggong"></span>
+        {else /}
+        {/if}
+    </div>
+    <div class="title">{$title}</div>
+
+
+    <a id="a_url" class="tap-a" href="{$url}">
+        点击立即跳转
+    </a>
+
+    <div class="redirect">
+        <span id="time">6</span>秒钟后，页面将会跳转
+    </div>
+    </div>
+
+    <script>
+        var t=6;
+        var i=setInterval(() => {
+            t--;
+            document.getElementById('time').innerText=t;
+            if(t<=0){
+                clearInterval(i);
+                document.getElementById('a_url').click();
+            }
+        }, 1000);
+
+    </script>
+</body>
+</html>
