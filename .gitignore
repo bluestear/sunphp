@@ -1,11 +1,12 @@
 /.idea
 /.vscode
 *.log
+
+
+# conflict file
 .env
-
-
-# .htaccess
-# .user.ini
+.htaccess
+.user.ini
 
 
 # addons module
