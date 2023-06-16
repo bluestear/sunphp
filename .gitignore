@@ -13,8 +13,7 @@
 # app module
 /app/light_im/
 
-# demo
-/app/demo/
+
 
 # attachment
 /attachment/*/

@@ -1,0 +1,92 @@
+<!--
+ * @Author: SonLight Tech
+ * @Date: 2023-04-18 16:07:53
+ * @LastEditors: light
+ * @LastEditTime: 2023-04-28 16:13:45
+ * @Description: SonLight Tech版权所有
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>微信支付V2</title>
+
+    <style>
+        .btn {
+            border-radius: 2px;
+            outline: none;
+            background: #07c160;
+            border: unset;
+            padding: 0px 15px;
+            margin: 0px auto;
+            margin-left: 50%;
+            transform: translateX(-50%);
+            margin-top: 10%;
+            line-height: 36px;
+            color: white;
+            font-size: 16px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- <script src="https://cdn.staticfile.org/vConsole/3.2.0/vconsole.min.js"></script>
+<script>var vConsole = new VConsole();</script> -->
+
+<!-- 必须引入util.js，才能实现jsapi支付 -->
+<script type="text/javascript" src="/public/sunphp/js/util.js?v=123"></script>
+
+    <button onclick="tapPay()" class="btn">util.js支付0.01元</button>
+
+    <script>
+        var pay_data='<?php  echo $pay_data ?>'
+        function tapPay() {
+            sunphp_wxjspay(JSON.parse(pay_data)).then(res=>{
+                console.log('支付成功')
+            }).catch(err=>{
+                console.log('支付失败')
+            });
+        }
+
+        var sunphp_wxjspay;
+//发起微信支付，微信支付依赖于 WeixinJSBridge 组件，所以发起时应该在ready事件中进行
+document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+
+    sunphp_wxjspay=function(data){
+
+        return new Promise((resolve,reject)=>{
+
+            util.pay({
+                api:'V2',//指定使用V2秘钥——不推荐使用
+                orderFee : data.money,//金额，单位元
+                payMethod : 'wechat',
+                orderTitle : data.title,
+                orderTid : data.tid,//模块内唯一的订单号
+                module : 'demo',//当前模块标识
+                success : function(result) {
+                    alert('支付成功');
+                   resolve();
+                },
+                fail : function(result) {
+                    alert('支付失败');
+                   reject();
+                },
+                complete : function(result) {
+                }
+            });
+
+        });
+    }
+
+});
+
+
+    </script>
+</body>
+
+</html>

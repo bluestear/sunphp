@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest versionCode="">
+	<application><!-- 应用基础配置-->
+		<identity>demo</identity><!-- 应用标识与文件夹名称一致 -->
+		<name>demo应用名称</name><!-- 应用名称-->
+		<version>1.1.1</version><!-- 应用版本 -->
+		<description>我的demo应用描述信息</description><!-- 简短的应用描述 -->
+		<author>author</author><!-- 作者 -->
+
+
+		<icon>icon.jpg</icon><!-- 应用目录下的图标名称，默认icon.jpg -->
+
+
+		<!-- 【留空】默认点击应用进入模块菜单页-->
+		<!-- 【自定义】配置管理后台入口路径后，将直接跳转到管理后台（无菜单页）<admin>/demo/admin/index</admin> -->
+		<admin></admin>
+
+
+
+
+	</application>
+
+
+
+	<platform>
+
+		<supports><!-- 支持的平台类型-->
+				<item type="1" /><!-- 微信公众号-->
+				<item type="2" /><!-- 微信小程序-->
+				<item type="3" /><!-- 字节跳动小程序-->
+				<item type="4" /><!-- PC网站-->
+				<item type="5" /><!-- APP应用-->
+				<item type="6" /><!-- 支付宝小程序-->
+				<item type="7" /><!-- 百度小程序-->
+		</supports>
+
+	</platform>
+
+
+
+	<bindings>
+
+		<cover><!-- 前端入口地址，不带域名-->
+			<entry title="首页" url="/demo/index/index"/>
+			<entry title="用户页" url="/demo/user/index"/>
+			<entry title="订单页" url="/demo/order/index"/>
+		</cover>
+
+		<menu><!-- 管理后台菜单地址，不带域名-->
+			<entry title="后台菜单1" url="/demo/admin/index" />
+			<entry title="后台菜单2" url="/demo/admin/user" />
+			<entry title="后台菜单3" url="/demo/admin/msg" />
+			<entry title="后台菜单4" url="/demo/admin/test" />
+			<entry title="后台菜单5" url="/demo/admin/sun" />
+		</menu>
+
+	</bindings>
+
+
+    <install>db_install.php</install><!-- 数据库安装文件-->
+	<uninstall>db_uninstall.php</uninstall><!-- 数据库卸载文件-->
+	<upgrade>db_upgrade.php</upgrade><!-- 数据库升级文件-->
+
+</manifest>

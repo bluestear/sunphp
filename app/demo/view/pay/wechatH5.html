@@ -1,0 +1,62 @@
+<!--
+ * @Author: SonLight Tech
+ * @Date: 2023-04-18 16:07:53
+ * @LastEditors: light
+ * @LastEditTime: 2023-04-28 17:48:22
+ * @Description: SonLight Tech版权所有
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>微信手机网站支付</title>
+
+    <style>
+        .btn {
+            border-radius: 2px;
+            outline: none;
+            background: #07c160;
+            border: unset;
+            padding: 0px 15px;
+            margin: 0px auto;
+            margin-left: 50%;
+            transform: translateX(-50%);
+            margin-top: 10%;
+            line-height: 36px;
+            color: white;
+            font-size: 16px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- <script src="https://cdn.staticfile.org/vConsole/3.2.0/vconsole.min.js"></script>
+<script>var vConsole = new VConsole();</script> -->
+
+
+    <button onclick="tapPayWap()" class="btn">微信手机网站支付</button>
+
+    <button onclick="tapPayScan()" class="btn">微信扫码支付</button>
+
+
+
+    <script>
+        /* 微信通过referer来判断来源，不能进入页面就支付 */
+        function tapPayWap(){
+            window.location.href='/index.php/demo/pay/wechatWap?i=23'
+        }
+
+
+        function tapPayScan(){
+            window.location.href='/index.php/demo/pay/wechatScan?i=23'
+        }
+
+    </script>
+</body>
+
+</html>

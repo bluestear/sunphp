@@ -33,7 +33,7 @@ $gitee="https://gitee.com/bluestear/sunphp.git";
 $cmd='cd '.$path;
 $cmd.=' && git init ';
 $cmd.=' && git remote add origin '.$gitee;
-$cmd.=' && git pull '.$gitee;
+$cmd.=' && git pull  origin master ';
 
 print_r('Sunphp安装文件下载中……');
 echo '<br/>';

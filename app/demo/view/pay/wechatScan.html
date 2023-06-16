@@ -1,0 +1,48 @@
+<!--
+ * @Author: SonLight Tech
+ * @Date: 2023-04-18 16:07:53
+ * @LastEditors: light
+ * @LastEditTime: 2023-04-28 18:03:15
+ * @Description: SonLight Tech版权所有
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>微信扫码支付</title>
+
+    <style>
+        #qrid {
+            margin: 50px auto;
+            width: 450px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- <script src="https://cdn.staticfile.org/vConsole/3.2.0/vconsole.min.js"></script>
+<script>var vConsole = new VConsole();</script> -->
+
+
+ <!--引入jquery，jquery.qrcode-->
+ <script type='text/javascript'src='https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js'></script>
+ <script type="text/javascript"src="https://cdn.staticfile.org/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+
+
+ <div id = "qrid"></div>
+
+
+    <script>
+      $(function(){
+        var qrstr = "{$code_url}";
+        $('#qrid').qrcode({width: 400,height: 400,text: qrstr});//指定二维码大小
+    });
+
+    </script>
+</body>
+
+</html>
