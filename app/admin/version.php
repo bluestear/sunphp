@@ -8,7 +8,7 @@
  */
 
 return [
-    'version'=>'1.0.4',
+    'version'=>'1.0.5',
     'release'=>'20230501',
     'name'=>'Sunphp'
 ];
