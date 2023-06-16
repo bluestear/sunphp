@@ -19,21 +19,40 @@ if(in_array('exec', $disabled)){
 
 $path=__DIR__;
 
+//删除存在的.git文件夹
+$git_dir=$path.'/'.'.git';
+if(is_dir($git_dir)){
+    print_r('根目录下已经存在/.git/文件夹');
+    echo '<br/>';
+    print_r('如需重新安装，请删除/.git/文件夹');
+    echo '<br/>';
+    die();
+}
+
 $gitee="https://gitee.com/bluestear/sunphp.git";
 $cmd='cd '.$path;
 $cmd.=' && git init ';
 $cmd.=' && git remote add origin '.$gitee;
 $cmd.=' && git pull '.$gitee;
+
+print_r('Sunphp安装文件下载中……');
+echo '<br/>';
+
 exec($cmd,$log,$status);
 $data['log']=$log;
 $data['execstr']=$cmd;
 $data['status']=$status;
 
-//print_r($data);
+
 
 if($status==0){
 $website=$_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['HTTP_HOST'];
 header("Location:".$website);
+}else{
+    echo "安装文件下载失败！";
+    echo '<br/>';
+    print_r($log);
+    echo '<br/>';
 }
 
 

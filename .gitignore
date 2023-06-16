@@ -1,6 +1,8 @@
 /.idea
 /.vscode
 *.log
+.htaccess
+.user.ini
 
 # .env
 
