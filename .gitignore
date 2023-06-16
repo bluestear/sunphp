@@ -1,7 +1,7 @@
 /.idea
 /.vscode
 *.log
-/.env
+.env
 
 
 # .htaccess
