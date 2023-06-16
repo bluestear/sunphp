@@ -49,21 +49,21 @@ return [
             'prefix'          => env('database.prefix', 'sun_'),
 
             // 数据库部署方式:0 集中式(单一服务器),1 分布式(主从服务器)
-            'deploy'          => 0,
+            'deploy'          => env('database.deploy', 0),
             // 数据库读写是否分离 主从式有效
-            'rw_separate'     => false,
+            'rw_separate'     => env('database.rw_separate', false),
             // 读写分离后 主服务器数量
-            'master_num'      => 1,
+            'master_num'      => env('database.master_num', 1),
             // 指定从服务器序号
-            'slave_no'        => '',
+            'slave_no'        => env('database.slave_no', ''),
             // 是否严格检查字段是否存在
-            'fields_strict'   => true,
+            'fields_strict'   => env('database.fields_strict', true),
             // 是否需要断线重连
-            'break_reconnect' => false,
+            'break_reconnect' => env('database.break_reconnect', false),
             // 监听SQL
             'trigger_sql'     => env('app_debug', true),
             // 开启字段缓存
-            'fields_cache'    => false,
+            'fields_cache'    => env('database.fields_cache', false),
         ],
 
         // 更多的数据库配置信息

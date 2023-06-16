@@ -35,13 +35,13 @@ return [
         // 更多的缓存连接
         'redis'    => [
             'type'       => 'redis',
-            'host'       => '127.0.0.1',
-            'port'       => 6379,
-            'password'   => '',
+            'host'       => env('redis.host','127.0.0.1'),
+            'port'       => env('redis.port',6379),
+            'password'   => env('redis.password',''),
             // 缓存前缀
-            'prefix'     => '',
+            'prefix'     => env('redis.prefix',''),
             // 缓存有效期 0表示永久缓存
-            'expire'     => 0,
+            'expire'     => env('redis.expire',0),
         ],
     ],
 ];

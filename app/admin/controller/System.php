@@ -184,6 +184,13 @@ class System extends Base{
             return jsonResult(200,'操作成功',['lock'=>1]);
         }
 
+        // 将.env文件复制到根目录
+        $env_file=root_path().'.env';
+        $env_data=root_path().'data/.env';
+        if(!file_exists($env_file)&&file_exists($env_data)){
+            copy($env_data,$env_file);
+        }
+
         if($post['type']=='check'){
             $v=require(app_path() . 'version.php');
             $data=[

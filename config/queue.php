@@ -24,12 +24,12 @@ return [
         'redis'    => [
             'type'       => 'redis',
             'queue'      => 'default',
-            'host'       => '127.0.0.1',
-            'port'       => 6379,
-            'password'   => '',
-            'select'     => 0,
-            'timeout'    => 0,
-            'persistent' => false,
+            'host'       => env('redis.host','127.0.0.1'),
+            'port'       => env('redis.port',6379),
+            'password'   => env('redis.password',''),
+            'select'     => env('redis.select',0),
+            'timeout'    => env('redis.timeout',0),
+            'persistent' => env('redis.persistent',false),
         ],
     ],
     'failed'      => [
