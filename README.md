@@ -29,6 +29,36 @@
 Include /www/wwwroot/sunphp.git/*.conf
 
 
+## 免费商用版
+[sunphp](https://gitee.com/bluestear/sunphp) 支持**免费商用**（需保留代码注释版权，页面版权信息），支持**Apache2.0开源协议**。
+
+
+## 允许行为
+1. 允许免费商用
+2. 允许基于框架开发应用模块并作为独立系统出售
+3. 允许修改系统logo图标、favicon.ico
+
+
+## 禁止行为
+1. 禁止修改框架代码并再次**发布框架衍生版与Sunphp产生恶意竞争**的行为
+2. 禁止任意删除修改代码注释版权、页面版权信息
+3. 禁止任何违反Apache2.0开源协议及《中华人民共和国著作权法》的行为
+
+
+## 高级商用版
+免费商用版已经能满足大部分用户需求，如果有以下特殊需求，可付费开通[高级商用版](https://mall.sunphp.cn/pages/goods_details/index?id=12)
+1. 如需隐藏版权信息（powered by Sunphp），需付费开通高级商用版
+2. 如需隐藏系统在线升级功能、应用市场功能，需付费开通高级商用版
+3. 如需其他特殊的定制需求，欢迎联系[商务合作](/cooperation/)
+
+
+## 正版校验
+[高级商用版校验](https://mall.sunphp.cn/check.html)，全网唯一入口！
+1. 点击校验网址
+2. 输入激活秘钥，点击校验按钮
+3. 如果提示正版则为正版授权，反之则为假冒！
+
+
 ## 特技
 
 1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
